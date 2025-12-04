@@ -1,26 +1,78 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #000000;
+  --foreground: #ffffff;
+  --gold: #d4af37;
+  --gold-light: #f4d03f;
+  --gold-dark: #b8941f;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-gold-dark: var(--gold-dark);
+  --font-sans: var(--font-inter);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Tailwind utility classes for gold colors */
+@layer utilities {
+  .text-gold {
+    color: var(--gold);
+  }
+  .bg-gold {
+    background-color: var(--gold);
+  }
+  .border-gold {
+    border-color: var(--gold);
+  }
+  .text-gold-light {
+    color: var(--gold-light);
+  }
+  .bg-gold-light {
+    background-color: var(--gold-light);
+  }
+  .text-gold-dark {
+    color: var(--gold-dark);
+  }
+  .bg-gold-dark {
+    background-color: var(--gold-dark);
+  }
+  
+  /* Gradient utilities */
+  .from-gold {
+    --tw-gradient-from: var(--gold);
+    --tw-gradient-to: var(--gold);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  }
+  .to-gold-light {
+    --tw-gradient-to: var(--gold-light);
+  }
+  .to-gold-dark {
+    --tw-gradient-to: var(--gold-dark);
+  }
+  .via-gold-light {
+    --tw-gradient-stops: var(--tw-gradient-from), var(--gold-light), var(--tw-gradient-to);
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: var(--background);
+  background: #000000;
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), sans-serif;
+}
+
+/* Ensure pure black backgrounds */
+.bg-black {
+  background-color: #000000 !important;
+}
+
+main {
+  background-color: #000000;
 }

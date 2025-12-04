@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Uratech - Premium Business Landing Page
+
+A modern, animated landing page for car consultancy and business services built with Next.js, TypeScript, Tailwind CSS, and Framer Motion.
+
+## Features
+
+- 🎨 **Black & Gold Theme** - Elegant black background with gold accents
+- ✨ **Smooth Animations** - Powered by Framer Motion for engaging user experience
+- 📱 **Responsive Design** - Fully responsive across all devices
+- 🎯 **Component-Based** - Modular section components for easy maintenance
+- 🔤 **Inter Font** - Clean, modern typography using Inter font family
+
+## Tech Stack
+
+- **Next.js 16** - React framework with App Router
+- **TypeScript** - Type-safe development
+- **Tailwind CSS v4** - Utility-first CSS framework
+- **Framer Motion** - Animation library for React
+- **Lucide React** - Beautiful icon library
 
 ## Getting Started
 
-First, run the development server:
+First, install dependencies:
 
 ```bash
-npm run dev
-# or
+yarn install
+```
+
+Then, run the development server:
+
+```bash
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+uratech/
+├── app/
+│   ├── layout.tsx      # Root layout with Inter font
+│   ├── page.tsx        # Main page with all sections
+│   └── globals.css     # Global styles and theme configuration
+├── components/
+│   ├── Navbar.tsx      # Navigation bar with mobile menu
+│   ├── Hero.tsx        # Hero section with animated background
+│   ├── Services.tsx    # Services grid with hover effects
+│   ├── About.tsx       # About section with stats
+│   ├── Contact.tsx     # Contact form and information
+│   └── Footer.tsx      # Footer with social links
+└── public/             # Static assets
+```
 
-## Learn More
+## Sections
 
-To learn more about Next.js, take a look at the following resources:
+1. **Hero** - Eye-catching hero section with call-to-action buttons
+2. **Services** - Grid of service cards with icons and descriptions
+3. **About** - Company information with statistics
+4. **Contact** - Contact form and contact information
+5. **Footer** - Footer with links and social media
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Customization
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Colors
 
-## Deploy on Vercel
+The theme colors are defined in `app/globals.css`:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `--gold`: #d4af37 (Primary gold)
+- `--gold-light`: #f4d03f (Light gold)
+- `--gold-dark`: #b8941f (Dark gold)
+- `--background`: #000000 (Black background)
+- `--foreground`: #ffffff (White text)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Fonts
+
+The project uses Inter font family, configured in `app/layout.tsx`.
+
+## Build for Production
+
+```bash
+yarn build
+```
+
+## Deploy
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new).
+
+Check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
